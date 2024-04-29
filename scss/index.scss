@@ -1,0 +1,11 @@
+@import "layout.scss";
+@import "components.scss";
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    @include card;
+  }
+}

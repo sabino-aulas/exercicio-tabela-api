@@ -1,0 +1,48 @@
+/* LAYOUT */
+
+@import "resets";
+@import "cores";
+@import "components";
+
+body {
+    box-sizing: border-box;
+    background-color: $verde;
+
+    display: grid;
+
+    grid-template-rows: 0.1fr 1fr;
+
+    .cabecalho {
+        padding: 10px 30px;
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        > h1 {
+            text-align: center;
+        }
+
+        > nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            > a {
+                @include navButton;
+            }
+        }
+    }
+}
+
+main {
+    box-sizing: border-box;
+    padding: 10px;
+}
+

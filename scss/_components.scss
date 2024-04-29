@@ -1,0 +1,137 @@
+/* COMPONENTS */
+@import "cores";
+
+@mixin navButton {
+  text-decoration: none;
+  font-size: 1.5em;
+  background-color: $roxo;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  background-color: $cinza-claro;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: solid $cinza-escuro 3px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 500px;
+
+  input {
+    @include input;
+  }
+
+  > header {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@mixin tabela {
+  width: 100%;
+  position: relative;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  thead {
+    margin: 0;
+    position: sticky;
+    top: 0px;
+    background-color: $cinza-medio;
+  }
+
+  th,
+  td {
+    border: solid 1px $cinza-escuro;
+    padding: 10px;
+  }
+
+  th {
+    background-color: $cinza-medio;
+  }
+
+  tr:nth-child(even) {
+    background-color: $cinza-claro;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $cinza-claro;
+  }
+}
+
+@mixin card {
+  background-color: $cinza-claro;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: solid $cinza-escuro 3px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 400px;
+  min-height: 250px;
+
+  > header {
+    text-align: center;
+  }
+
+  > form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+
+    > input {
+      @include input;
+    }
+
+    > button {
+      @include submitButton;
+    }
+  }
+
+  .resultados {
+    display: flex;
+    padding: 10px;
+
+    #resultado {
+      display: none;
+      @include messagePanel;
+    }
+  }
+}
+
+@mixin input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: solid 1px $cinza-escuro;
+}
+
+@mixin submitButton {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: $cinza-escuro;
+  color: white;
+  font-size: 1.2em;
+}
+
+@mixin messagePanel {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $cinza-medio;
+  margin-right: 10px;
+  text-align: center;
+}

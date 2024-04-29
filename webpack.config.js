@@ -16,7 +16,7 @@ module.exports = {
     },
     entry: { // Arquivos JS que o webpack vai disponibilizar como "chunks" (partes) do "bundle" (pacote)
         index: path.resolve(__dirname, './', 'index.js'),
-        // outra: path.resolve(__dirname, './', 'outra.js')
+        cliente: path.resolve(__dirname, './', 'cliente.js')
     },
     output: { // Pasta e arquivo que será enviada a compilação do seu projeto em uma build
         filename: '[name]-[fullhash].js',
@@ -54,11 +54,11 @@ module.exports = {
             template: path.resolve(__dirname, './', 'index.html'),
             chunks: ['index'] // Indica qual bundle de entrypoint gerado será utilizado neste HTML
         }),
-        /*new HTMLWebpackPlugin({
-            filename: 'outra.html',
-            template: path.resolve(__dirname, './', 'outra.html'),
-            chunks: ['outra']
-        }),*/
+        new HTMLWebpackPlugin({
+            filename: 'cliente.html',
+            template: path.resolve(__dirname, './', 'cliente.html'),
+            chunks: ['cliente']
+        }),
         // Adicione mais instâncias do HTMLWebpackPlugin para mais arquivos HTML
     ]
 }
