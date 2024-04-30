@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Iniciando</h1>
+
+    <header class="cabecalho">
+        <h1>Página do Gerente</h1>
+        <nav>
+            <a href="cliente.html">Lista</a>
+            <a href="index.html">Gerência</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <header>
+                <h1>Novo Livro</h1>
+            </header>
+            <form>
+                <input placeholder="Digite um título" type="text" id="titulo">
+                <input placeholder="Digite uma descrição" type="text" id="descricao">
+                <button type="button">Cadastrar</button>
+            </form>
+            <div class="resultados">
+                <div id="resultado">
+                    SUCESSO!
+                </div>
+            </div>
+    </main>
+
 </body>
+
 </html>

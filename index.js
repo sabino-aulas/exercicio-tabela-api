@@ -1,6 +1,3 @@
+import "./scss/index.scss"
 
-
-
-import "./index.scss"
-
-console.log("Iniciando...")
+console.log("Iniciando contexto global: Página de usuário...")
